@@ -3,8 +3,10 @@ getSumBtn.append("Get Total Price");
 document.body.appendChild(getSumBtn);
 const sumPrice=document.getElementsByClassName("price");
 let sum=0;
+let flag=false;
 const getSum = () => {
 //Add your code here
+	if(flag==false){
   for(let i=0;i<sumPrice.length;i++){
 	  sum+=parseInt(sumPrice[i].textContent);
   }
@@ -13,7 +15,9 @@ const getSum = () => {
 	a.innerHTML=
 		`<td id="ans" colspan="2">${sum}</td>`
 	table.appendChild(a);
+	}
 	
+	flag=true;
 };
 
 getSumBtn.addEventListener("click", getSum);
