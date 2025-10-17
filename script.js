@@ -13,7 +13,8 @@ const getSum = () => {
 	const table=document.getElementById('table');
 	let a=document.createElement('tr');
 	a.innerHTML=
-		`<td id="ans" colspan="2">${sum}</td>`
+		`<td>Total</td>
+		<td id="ans">${sum}</td>`
 	table.appendChild(a);
 	}
 	
